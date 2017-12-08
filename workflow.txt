@@ -5,3 +5,5 @@ npm install normalize.css --save
 npm install gulp-cli --global
 npm install gulp --save-dev
 npm install gulp-watch --save-dev
+npm install gulp-postcss --save-dev
+npm install autoprefixer --save-dev

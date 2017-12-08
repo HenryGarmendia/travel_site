@@ -1,6 +1,8 @@
 // gulp dependencies
-var gulp 				= require('gulp'),
-		gulp_watch 	= require('gulp-watch');
+var gulp 					= require('gulp'),
+		gulp_watch 		= require('gulp-watch'),
+		postcss 			= require('gulp-postcss'),
+		autoprefixer	= require('autoprefixer');
 
 // everything on gulp revolves on tasks
 gulp.task('default', function() {
@@ -12,7 +14,10 @@ gulp.task('html', function() {
 });
 
 gulp.task('css', function() {
-	console.log('Changes have been done to the CSS file...');
+	// gulp will create automatically a temp folder and css file
+	return gulp.src('./app/assets/css/app.css ')
+				 .pipe(postcss([autoprefixer]))
+				 .pipe( gulp.dest('./app/temp/css') );
 });
 
 // automating the app files
