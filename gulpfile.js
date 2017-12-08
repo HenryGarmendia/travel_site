@@ -2,7 +2,8 @@
 var gulp 					= require('gulp'),
 		gulp_watch 		= require('gulp-watch'),
 		postcss 			= require('gulp-postcss'),
-		autoprefixer	= require('autoprefixer');
+		autoprefixer	= require('autoprefixer'),
+		cssvars				= require('postcss-simple-vars');
 
 // everything on gulp revolves on tasks
 gulp.task('default', function() {
@@ -16,7 +17,7 @@ gulp.task('html', function() {
 gulp.task('css', function() {
 	// gulp will create automatically a temp folder and css file
 	return gulp.src('./app/assets/css/app.css ')
-				 .pipe(postcss([autoprefixer]))
+				 .pipe(postcss([cssvars, autoprefixer]))
 				 .pipe( gulp.dest('./app/temp/css') );
 });
 
