@@ -1,2 +1,5 @@
 #Installation workflow
+npm init
+npm install jquery --save
+npm install normalize.css --save
 npm install gulp-cli --global
