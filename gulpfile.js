@@ -5,7 +5,8 @@ var gulp 					= require('gulp'),
 		autoprefixer	= require('autoprefixer'),
 		cssvars				= require('postcss-simple-vars'),
 		nested 				= require('postcss-nested'),
-		cssImport 		= require('postcss-import');
+		cssImport 		= require('postcss-import'),
+		browserSync 	= require('browser-sync').create();
 
 // everything on gulp revolves on tasks
 gulp.task('default', function() {
@@ -26,6 +27,13 @@ gulp.task('css', function() {
 
 // automating the app files
 gulp.task('gulp_watch', function() {
+
+	browserSync.init({
+		server: {
+			baseDir: "app"
+		}
+	});
+
 	// HTML automation
 	gulp_watch('./app/index.html', function() {
 		gulp.start('html');
