@@ -498,6 +498,13 @@ img {
 	padding: .75rem 1.2rem;
 	text-decoration: none; }
 
+.btn--orange { 
+		background-color: #d59641; }
+
+.btn--large { 
+		font-size: 1.25rem;
+		padding: 1.1rem 1.9rem; }
+
 
 
 
