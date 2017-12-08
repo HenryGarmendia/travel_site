@@ -36,7 +36,7 @@ gulp.task('gulp_watch', function() {
 
 	// HTML automation
 	gulp_watch('./app/index.html', function() {
-		gulp.start('html');
+		browserSync.reload();
 	});
 
 	// any CSS automation
