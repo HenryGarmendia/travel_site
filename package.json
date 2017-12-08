@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/HenryGarmendia/travel_site#readme",
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0"
   }
 }
