@@ -459,7 +459,11 @@ img {
 		height: auto; }
 
 .large-hero { 
+	border-bottom: 10px solid #2f5572;
 	position: relative; }
+
+.large-hero__image { 
+		display: block; }
 
 .large-hero__text-content { 
 		position: absolute;
