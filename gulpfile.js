@@ -1,11 +1,8 @@
 // gulp dependencies
 var gulp 					= require('gulp'),
 		gulp_watch 		= require('gulp-watch'),
-		postcss 			= require('gulp-postcss'),
-		autoprefixer	= require('autoprefixer'),
-		cssvars				= require('postcss-simple-vars'),
-		nested 				= require('postcss-nested'),
-		cssImport 		= require('postcss-import'),
+		
+		
 		browserSync 	= require('browser-sync').create();
 
 // everything on gulp revolves on tasks
@@ -15,14 +12,6 @@ gulp.task('default', function() {
 
 gulp.task('html', function() {
 	console.log('Changes have been done to the HTML file...');
-});
-
-gulp.task('css', function() {
-	// gulp will create automatically a temp folder and css file
-	console.log('Changes have been done to the CSS file...');
-	return gulp.src('./app/assets/css/app.css ')
-				 .pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
-				 .pipe( gulp.dest('./app/temp/css') );
 });
 
 // automating the app files
