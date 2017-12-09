@@ -12,8 +12,8 @@ gulp.task('css', function() {
 	console.log('Changes have been done to the CSS file...');
 	return gulp.src('./app/assets/css/app.css ')
 				 .pipe(postcss([cssImport, cssvars, nested, autoprefixer]))
-				 .on('error', function(error.toString()) { // error handling function
-				 		console.log(error);
+				 .on('error', function(error) { // error handling function
+				 		console.log(error.toString());
 					 	this.emit('end');
 				 })
 				 .pipe( gulp.dest('./app/temp/css') );

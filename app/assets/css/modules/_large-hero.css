@@ -2,24 +2,28 @@
 	position: relative;
 
 	&__text-content { 
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 0;
-	text-align: center;
-	width: 100%; }
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		text-align: center;
+		width: 100%; }
 
 	&__title { 
-	color: $mainBlue;
-	font-size: 4.8rem;
-	font-weight: 300;
-	margin: 0; }
+		color: $mainBlue;
+		font-size: 1.1rem;
+		font-weight: 300;
+		margin: 0;
+
+		@media (min-width: 530px) {
+		 	font-size: 4.8rem;
+		 } }
 
 	&__subtitle { 
-	color: $mainBlue;
-	font-size: 2.9rem;
-	font-weight: 300;
-	margin: 0; }
+		color: $mainBlue;
+		font-size: 2.9rem;
+		font-weight: 300;
+		margin: 0; }
 
 	&__description { 
 		color: #fff;
