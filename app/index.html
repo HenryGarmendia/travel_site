@@ -30,7 +30,12 @@
   <!-- ::HERO SECTION
   ======================================== -->
   <div class="large-hero">
-    <img src="assets/images/hero--large.jpg">
+    <picture>
+      <source src="assets/images/hero--large.jpg" media="(min-width: 1380px)">
+      <source src="assets/images/hero--medium.jpg" media="(min-width: 990px)">
+      <source src="assets/images/hero--small.jpg" media="(min-width: 640px)">
+      <img src="assets/images/hero--smaller.jpg" alt="Coastal view of ocean and mountains">
+    </picture><!-- //picture END -->
 
     <div class="large-hero__text-content">
       <h1 class="large-hero__title">Your clarity.</h1>
