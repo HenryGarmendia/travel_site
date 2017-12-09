@@ -15,7 +15,7 @@ gulp.task('gulp_watch', function() {
 
 	// HTML automation
 	gulp_watch('./app/index.html', function() {
-		brows IerSync.reload();
+		browserSync.reload();
 	});
 
 	// any CSS automation
