@@ -11,3 +11,4 @@ npm install postcss-simple-vars --save-dev
 npm install postcss-nested --save-dev
 npm install postcss-import --save-dev
 npm install browser-sync --save-dev
+npm install postcss-mixins --save-dev
