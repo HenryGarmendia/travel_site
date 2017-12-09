@@ -1,3 +1,4 @@
+// gulp dependencies
 var gulp 					= require('gulp'),
 		postcss 			= require('gulp-postcss'),
 		autoprefixer	= require('autoprefixer'),
