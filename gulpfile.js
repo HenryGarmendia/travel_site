@@ -29,6 +29,7 @@ gulp.task('css', function() {
 gulp.task('gulp_watch', function() {
 
 	browserSync.init({
+		notify: false,
 		server: {
 			baseDir: "app"
 		}
@@ -41,8 +42,13 @@ gulp.task('gulp_watch', function() {
 
 	// any CSS automation
 	gulp_watch('./app/assets/css/**/*.css', function() {
-		gulp.start('css');
+		gulp.start('cssInjection');
 	});
+});
+
+gulp.task('cssInjection', ['css'], function() {
+	return gulp.src('./app/temp/css/app.css')
+				 .pipe(browserSync.stream());
 });
 
 
