@@ -12,3 +12,6 @@ npm install postcss-nested --save-dev
 npm install postcss-import --save-dev
 npm install browser-sync --save-dev
 npm install postcss-mixins --save-dev
+npm install gulp-svg-sprite --save-dev
+npm install gulp-rename --save-dev
+npm install del --sav-dev
