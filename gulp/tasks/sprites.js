@@ -1,7 +1,7 @@
 var gulp 				= require('gulp'),
 		svgSprite 	= require('gulp-svg-sprite'),
 		rename 			= require('gulp-rename'),
-		del 		 		= require('del ');
+		del 		 		= require('del');
 
 var config = { 
 	mode: { 
@@ -37,7 +37,7 @@ gulp.task('copySpriteCSS', ['createSprite'], function() {
 				 .pipe(gulp.dest('./app/assets/css/modules'))
 })
 
-gulp.tak('endClean', ['copySpriteGraphic', 'copySpriteCSS'], function() {
+gulp.task('endClean', ['copySpriteGraphic', 'copySpriteCSS'], function() {
 	return del('./app/temp/sprite')
 })
 
