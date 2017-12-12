@@ -16,3 +16,4 @@ npm install gulp-svg-sprite --save-dev
 npm install gulp-rename --save-dev
 npm install del --sav-dev
 npm install postcss-hexrgba --save-dev
+npm install webpack -g
