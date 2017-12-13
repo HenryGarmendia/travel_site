@@ -17,3 +17,4 @@ npm install gulp-rename --save-dev
 npm install del --sav-dev
 npm install postcss-hexrgba --save-dev
 npm install webpack -g
+npm install webpack --save-dev
