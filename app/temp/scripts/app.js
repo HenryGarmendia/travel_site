@@ -70,6 +70,8 @@
 var $ = __webpack_require__(1);
 var Person = __webpack_require__(2);
 
+alert('Testing 123');
+
 var hendogg = new Person ('Hendogg Garmendia', 'Red');
 
 hendogg.greet();
