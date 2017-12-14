@@ -1172,8 +1172,8 @@ Instead edit gulp/templates/sprite */
 	opacity: 0;
 	-webkit-transition: all 1.5s ease-out;
 	transition: all 1.5s ease-out;
-	-webkit-transform: scale(1.1 5);
-	        transform: scale(1.1 5); }
+	-webkit-transform: scale(1.15);
+	        transform: scale(1.15); }
 
 .reveal-item--is-visible { 
 		opacity: 1;
