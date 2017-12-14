@@ -10437,8 +10437,6 @@ var RevealOnScroll = function () {
 		this.offset_percentage = off_set;
 		this.hide_initially();
 		this.create_waypoints();
-
-		console.log(this.items_reveal);
 	}
 
 	_createClass(RevealOnScroll, [{

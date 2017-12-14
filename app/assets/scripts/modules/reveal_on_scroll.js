@@ -8,8 +8,6 @@ class RevealOnScroll {
 		this.offset_percentage = off_set;
 		this.hide_initially();
 		this.create_waypoints();
-
-		console.log(this.items_reveal);
 	}
 
 	hide_initially () {
@@ -17,7 +15,7 @@ class RevealOnScroll {
 	}
 
 	create_waypoints() {
-		var this_obj	= this;
+		var this_obj = this;
 		this.items_reveal.each(function() {
 			var current_item = this;
 			 new Waypoint({
