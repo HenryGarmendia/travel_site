@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import MobileMenu from './modules/MobileMenu';
-import reveal_on_scroll from './modules/reveal_on_scroll';
+import RevealOnScroll from './modules/reveal_on_scroll';
+import StickyHeader from './modules/sticky_header';
 
 
 // dynamically add current yeqar
@@ -9,5 +10,6 @@ var current_year = new_date.getFullYear();
 $('.stite-footer__year').html(current_year);
 
 var mobile_menu = new MobileMenu(); 
-new reveal_on_scroll($('.feature-item'), '85%');
-new reveal_on_scroll($('.testimonial'), '60%');
+new RevealOnScroll($('.feature-item'), '85%');
+new RevealOnScroll($('.testimonial'), '60%');
+var sticky_header = new StickyHeader();
