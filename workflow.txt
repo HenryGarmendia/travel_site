@@ -19,3 +19,4 @@ npm install postcss-hexrgba --save-dev
 npm install webpack -g
 npm install webpack --save-dev
 npm install babel-core babel-loader babel-preset-es2015 --save-dev
+npm install waypoints --save

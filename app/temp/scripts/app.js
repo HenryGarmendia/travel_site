@@ -60,81 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _MobileMenu = __webpack_require__(1);
-
-var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mobile_menu = new _MobileMenu2.default();
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(2);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MobileMenu = function () {
-	function MobileMenu() {
-		_classCallCheck(this, MobileMenu);
-
-		this.site_header = (0, _jquery2.default)('.site-header');
-		this.menu_icon = (0, _jquery2.default)('.site-header__menu-icon');
-		this.menu_content = (0, _jquery2.default)('.site-header__menu-content');
-		this.events();
-	}
-
-	_createClass(MobileMenu, [{
-		key: 'events',
-		value: function events() {
-			this.menu_icon.click(this.toggle_menu.bind(this));
-		}
-	}, {
-		key: 'toggle_menu',
-		value: function toggle_menu() {
-			// reveal the navigation links
-			this.menu_content.toggleClass('site-header__menu-content--is-visible');
-			this.site_header.toggleClass('site-header--is-expanded');
-			this.menu_icon.toggleClass('site-header__menu-icon--close-x');
-		}
-	}]);
-
-	return MobileMenu;
-}();
-
-var new_date = new Date();
-var current_year = new_date.getFullYear();
-(0, _jquery2.default)('.stite-footer__year').html(current_year);
-
-exports.default = MobileMenu;
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10392,6 +10322,129 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _MobileMenu = __webpack_require__(2);
+
+var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
+
+var _reveal_on_scroll = __webpack_require__(3);
+
+var _reveal_on_scroll2 = _interopRequireDefault(_reveal_on_scroll);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// dynamically add current yeqar
+var new_date = new Date();
+var current_year = new_date.getFullYear();
+(0, _jquery2.default)('.stite-footer__year').html(current_year);
+
+var mobile_menu = new _MobileMenu2.default();
+var revealOnScroll = new _reveal_on_scroll2.default();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobileMenu = function () {
+	function MobileMenu() {
+		_classCallCheck(this, MobileMenu);
+
+		this.site_header = (0, _jquery2.default)('.site-header');
+		this.menu_icon = (0, _jquery2.default)('.site-header__menu-icon');
+		this.menu_content = (0, _jquery2.default)('.site-header__menu-content');
+		this.events();
+	}
+
+	_createClass(MobileMenu, [{
+		key: 'events',
+		value: function events() {
+			this.menu_icon.click(this.toggle_menu.bind(this));
+		}
+	}, {
+		key: 'toggle_menu',
+		value: function toggle_menu() {
+			// reveal the navigation links
+			this.menu_content.toggleClass('site-header__menu-content--is-visible');
+			this.site_header.toggleClass('site-header--is-expanded');
+			this.menu_icon.toggleClass('site-header__menu-icon--close-x');
+		}
+	}]);
+
+	return MobileMenu;
+}();
+
+exports.default = MobileMenu;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RevealOnScroll = function () {
+	function RevealOnScroll() {
+		_classCallCheck(this, RevealOnScroll);
+
+		this.items_reveal = (0, _jquery2.default)('.feature-item');
+		this.hide_initially();
+
+		console.log(this.items_reveal);
+	}
+
+	_createClass(RevealOnScroll, [{
+		key: 'hide_initially',
+		value: function hide_initially() {
+			this.items_reveal.addClass('reveal-item');
+		}
+	}]);
+
+	return RevealOnScroll;
+}();
+
+exports.default = RevealOnScroll;
 
 /***/ })
 /******/ ]);

@@ -22,8 +22,4 @@ class MobileMenu {
 
 }
 
-var new_date = new Date();
-var current_year = new_date.getFullYear();
-$('.stite-footer__year').html(current_year);
-
 export default MobileMenu;
