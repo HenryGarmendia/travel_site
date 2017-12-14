@@ -9,4 +9,5 @@ var current_year = new_date.getFullYear();
 $('.stite-footer__year').html(current_year);
 
 var mobile_menu = new MobileMenu(); 
-var revealOnScroll = new reveal_on_scroll();
+new reveal_on_scroll($('.feature-item'), '85%');
+new reveal_on_scroll($('.testimonial'), '60%');

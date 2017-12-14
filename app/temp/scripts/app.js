@@ -10350,7 +10350,8 @@ var current_year = new_date.getFullYear();
 (0, _jquery2.default)('.stite-footer__year').html(current_year);
 
 var mobile_menu = new _MobileMenu2.default();
-var revealOnScroll = new _reveal_on_scroll2.default();
+new _reveal_on_scroll2.default((0, _jquery2.default)('.feature-item'), '85%');
+new _reveal_on_scroll2.default((0, _jquery2.default)('.testimonial'), '60%');
 
 /***/ }),
 /* 2 */
@@ -10429,10 +10430,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var RevealOnScroll = function () {
-	function RevealOnScroll() {
+	function RevealOnScroll(el_div, off_set) {
 		_classCallCheck(this, RevealOnScroll);
 
-		this.items_reveal = (0, _jquery2.default)('.feature-item');
+		this.items_reveal = el_div;
+		this.offset_percentage = off_set;
 		this.hide_initially();
 		this.create_waypoints();
 
@@ -10447,6 +10449,7 @@ var RevealOnScroll = function () {
 	}, {
 		key: 'create_waypoints',
 		value: function create_waypoints() {
+			var this_obj = this;
 			this.items_reveal.each(function () {
 				var current_item = this;
 				new Waypoint({
@@ -10454,7 +10457,7 @@ var RevealOnScroll = function () {
 					handler: function handler() {
 						(0, _jquery2.default)(current_item).addClass('reveal-item--is-visible');
 					},
-					offset: '85%'
+					offset: this_obj.offset_percentage
 				});
 			});
 		}
