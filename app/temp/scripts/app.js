@@ -99,8 +99,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var self = undefined;
-
 var MobileMenu = function () {
 	function MobileMenu() {
 		_classCallCheck(this, MobileMenu);
@@ -128,6 +126,10 @@ var MobileMenu = function () {
 
 	return MobileMenu;
 }();
+
+var new_date = new Date();
+var current_year = new_date.getFullYear();
+(0, _jquery2.default)('.stite-footer__year').html(current_year);
 
 exports.default = MobileMenu;
 
