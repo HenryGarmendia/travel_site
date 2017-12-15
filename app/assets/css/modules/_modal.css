@@ -6,8 +6,15 @@
 	bottom: 0;
 	right: 0;
 	left: 0;
+	transform: scale(1.2);
+	transition: all .3s ease-in-out;
 	visibility: hidden;
 	z-index: 5;
+
+	&--is-visible { 
+		opacity: 1;
+		transform: scale(1);
+		visibility: visible; }
 
 	&__inner { 
 		position: absolute;

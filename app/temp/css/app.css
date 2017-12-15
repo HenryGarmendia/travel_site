@@ -1274,10 +1274,20 @@ Instead edit gulp/templates/sprite */
 	bottom: 0;
 	right: 0;
 	left: 0;
+	-webkit-transform: scale(1.2);
+	        transform: scale(1.2);
+	-webkit-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
 	visibility: hidden;
 	z-index: 5;
 
 }
+
+.modal--is-visible { 
+		opacity: 1;
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+		visibility: visible; }
 
 .modal__inner { 
 		position: absolute;

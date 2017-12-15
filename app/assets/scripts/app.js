@@ -2,6 +2,7 @@ import $ from 'jquery';
 import MobileMenu from './modules/MobileMenu';
 import RevealOnScroll from './modules/reveal_on_scroll';
 import StickyHeader from './modules/sticky_header';
+import Modal from './modules/modal';
 
 
 // dynamically add current yeqar
@@ -13,3 +14,4 @@ var mobile_menu = new MobileMenu();
 new RevealOnScroll($('.feature-item'), '85%');
 new RevealOnScroll($('.testimonial'), '60%');
 var sticky_header = new StickyHeader();
+var modal = new Modal();

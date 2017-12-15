@@ -11109,6 +11109,10 @@ var _sticky_header = __webpack_require__(5);
 
 var _sticky_header2 = _interopRequireDefault(_sticky_header);
 
+var _modal = __webpack_require__(7);
+
+var _modal2 = _interopRequireDefault(_modal);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // dynamically add current yeqar
@@ -11120,6 +11124,7 @@ var mobile_menu = new _MobileMenu2.default();
 new _reveal_on_scroll2.default((0, _jquery2.default)('.feature-item'), '85%');
 new _reveal_on_scroll2.default((0, _jquery2.default)('.testimonial'), '60%');
 var sticky_header = new _sticky_header2.default();
+var modal = new _modal2.default();
 
 /***/ }),
 /* 3 */
@@ -11700,6 +11705,74 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Modal = function () {
+	function Modal() {
+		_classCallCheck(this, Modal);
+
+		this.open_modal_button = (0, _jquery2.default)('.open-modal');
+		this.modal = (0, _jquery2.default)('.modal');
+		this.close_modal_button = (0, _jquery2.default)('.modal__close');
+		this.modal_events();
+	}
+
+	_createClass(Modal, [{
+		key: 'modal_events',
+		value: function modal_events() {
+			// clicking the modal button
+			this.open_modal_button.click(this.open_modal.bind(this));
+			// clicking the x modal button
+			this.close_modal_button.click(this.close_modal.bind(this));
+
+			// pushes any key
+			(0, _jquery2.default)(document).keydown(this.key_press_handler.bind(this));
+		}
+	}, {
+		key: 'key_press_handler',
+		value: function key_press_handler(e) {
+			console.log(e);
+			if (e.key === "Escape") {
+				this.modal.removeClass('modal--is-visible');
+			}
+		}
+	}, {
+		key: 'open_modal',
+		value: function open_modal() {
+			this.modal.addClass('modal--is-visible');
+			return false; // prevents the browser from scrolling to top
+		}
+	}, {
+		key: 'close_modal',
+		value: function close_modal() {
+			this.modal.removeClass('modal--is-visible');
+		}
+	}]);
+
+	return Modal;
+}();
+
+exports.default = Modal;
 
 /***/ })
 /******/ ]);
