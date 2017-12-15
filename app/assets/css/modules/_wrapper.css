@@ -9,6 +9,9 @@
 	&--medium { 
 		max-width: 976px; }
 
+	&--narrow { 
+		max-width: 470px; }
+
 	&--no-padding-until-medium { 
 		padding-left: 0;
 		padding-right: 0;
@@ -33,4 +36,5 @@
 		margin-bottom: 1rem;
 
 		@mixin atSmall { 
-		margin-bottom: 3.875rem; } } }
+		margin-bottom: 3.875rem; } } 
+} /* wrapper END */

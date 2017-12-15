@@ -9,6 +9,9 @@
 	&--blue { 
 		color: $mainBlue; }
 
+	&--less-margin { 
+		margin-bottom: 1.3rem; }
+
 	&__icon { 
 		display: block;
 		margin-right: auto;
@@ -21,4 +24,6 @@
 			margin-left: 0;
 			margin-bottom: 0;
 			position: relative;
-			top: 10px; } } }
+			top: 10px; } }
+
+}/* section-title END */
