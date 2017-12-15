@@ -24,4 +24,6 @@
 		@mixin atSmall { 
 			text-align: left;
 			font-size: 1.875rem;
-			margin-top: 1em; } } }
+			margin-top: 1em; } } 
+
+}/* feature-item END */

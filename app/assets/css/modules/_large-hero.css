@@ -45,59 +45,6 @@
 		margin-right: auto; 
 
 		@mixin atSmall { 
-			 font-size: 1.875rem; } } }
+			 font-size: 1.875rem; } } 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}/* large-hero END */
