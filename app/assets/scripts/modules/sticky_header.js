@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints';
+import smoothScroll from 'jquery-smooth-scroll';
 
 class StickyHeader {
 
@@ -7,7 +8,14 @@ class StickyHeader {
 		this.site_header = $('.site-header');
 		this.hero_target = $('.large-hero__title');
 		this.header_waypoint();
+		this.page_sections = $('.page-section');
+		this.header_links = $('.primary-nav a');
+		this.page_sections_waypoint();
+		this.add_smooth_scrolling();
+	}
 
+	add_smooth_scrolling() {
+		this.header_links.smoothScroll();
 	}
 
 	header_waypoint() {
@@ -21,6 +29,36 @@ class StickyHeader {
 					this_obj.site_header.removeClass('site-header--dark');
 				}
 			}
+		});
+	}
+
+	page_sections_waypoint() {
+		var this_obj = this;
+		this.page_sections.each(function() {
+			var	current_page_section = this;
+			new Waypoint({
+				element: current_page_section,
+				handler: function(direction) {
+					if (direction == "down") {
+						var matching_header_link = current_page_section.getAttribute('data-matching-link');
+						this_obj.header_links.removeClass('is-current-link');
+						$(matching_header_link).addClass('is-current-link');
+					}
+				},
+				offset: "18%"
+			});
+
+			new Waypoint({
+				element: current_page_section,
+				handler: function(direction) {
+					if (direction == "up") {
+						var matching_header_link = current_page_section.getAttribute('data-matching-link');
+						this_obj.header_links.removeClass('is-current-link');
+						$(matching_header_link).addClass('is-current-link');
+					}
+				},
+				offset: "-28%"
+			});
 		});
 	}
 }
