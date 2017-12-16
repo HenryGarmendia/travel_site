@@ -11272,6 +11272,7 @@ var StickyHeader = function () {
 	function StickyHeader() {
 		_classCallCheck(this, StickyHeader);
 
+		this.lazy_images = (0, _jquery2.default)('.lazy-load');
 		this.site_header = (0, _jquery2.default)('.site-header');
 		this.hero_target = (0, _jquery2.default)('.large-hero__title');
 		this.header_waypoint();
@@ -11279,9 +11280,17 @@ var StickyHeader = function () {
 		this.header_links = (0, _jquery2.default)('.primary-nav a');
 		this.page_sections_waypoint();
 		this.add_smooth_scrolling();
+		this.refresh_waypoint();
 	}
 
 	_createClass(StickyHeader, [{
+		key: 'refresh_waypoint',
+		value: function refresh_waypoint() {
+			this.lazy_images.on('load', function () {
+				Waypoint.refreshAll();
+			});
+		}
+	}, {
 		key: 'add_smooth_scrolling',
 		value: function add_smooth_scrolling() {
 			this.header_links.smoothScroll();
@@ -11316,7 +11325,7 @@ var StickyHeader = function () {
 							(0, _jquery2.default)(matching_header_link).addClass('is-current-link');
 						}
 					},
-					offset: "18%"
+					offset: "-10%"
 				});
 
 				new Waypoint({
@@ -11328,7 +11337,7 @@ var StickyHeader = function () {
 							(0, _jquery2.default)(matching_header_link).addClass('is-current-link');
 						}
 					},
-					offset: "-28%"
+					offset: "-30%"
 				});
 			});
 		}

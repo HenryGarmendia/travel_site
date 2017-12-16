@@ -5,13 +5,21 @@ import smoothScroll from 'jquery-smooth-scroll';
 class StickyHeader {
 
 	constructor() {
-		this.site_header = $('.site-header');
-		this.hero_target = $('.large-hero__title');
+		this.lazy_images 		= $('.lazy-load');
+		this.site_header 		= $('.site-header');
+		this.hero_target 		= $('.large-hero__title');
 		this.header_waypoint();
-		this.page_sections = $('.page-section');
-		this.header_links = $('.primary-nav a');
+		this.page_sections 	= $('.page-section');
+		this.header_links 	= $('.primary-nav a');
 		this.page_sections_waypoint();
 		this.add_smooth_scrolling();
+		this.refresh_waypoint();
+	}
+
+	refresh_waypoint() {
+		this.lazy_images.on('load', function() {
+			Waypoint.refreshAll();
+		});
 	}
 
 	add_smooth_scrolling() {
@@ -45,7 +53,7 @@ class StickyHeader {
 						$(matching_header_link).addClass('is-current-link');
 					}
 				},
-				offset: "18%"
+				offset: "-10%"
 			});
 
 			new Waypoint({
@@ -57,7 +65,7 @@ class StickyHeader {
 						$(matching_header_link).addClass('is-current-link');
 					}
 				},
-				offset: "-28%"
+				offset: "-30%"
 			});
 		});
 	}
