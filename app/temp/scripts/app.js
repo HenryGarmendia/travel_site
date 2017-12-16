@@ -11760,7 +11760,7 @@ var Modal = function () {
 	}, {
 		key: 'key_press_handler',
 		value: function key_press_handler(e) {
-			console.log(e);
+
 			if (e.key === "Escape") {
 				this.modal.removeClass('modal--is-visible');
 			}

@@ -19,7 +19,7 @@ class Modal {
 	}
 
 	key_press_handler(e) {
-		console.log(e);
+
 		if (e.key === "Escape") {
 			this.modal.removeClass('modal--is-visible');
 		}
