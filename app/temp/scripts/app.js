@@ -11325,7 +11325,7 @@ var StickyHeader = function () {
 							(0, _jquery2.default)(matching_header_link).addClass('is-current-link');
 						}
 					},
-					offset: "18%"
+					offset: "0%"
 				});
 
 				new Waypoint({
@@ -11337,7 +11337,7 @@ var StickyHeader = function () {
 							(0, _jquery2.default)(matching_header_link).addClass('is-current-link');
 						}
 					},
-					offset: "-30%"
+					offset: "-40%"
 				});
 			});
 		}

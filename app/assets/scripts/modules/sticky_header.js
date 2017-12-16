@@ -53,7 +53,7 @@ class StickyHeader {
 						$(matching_header_link).addClass('is-current-link');
 					}
 				},
-				offset: "18%"
+				offset: "0%"
 			});
 
 			new Waypoint({
@@ -65,7 +65,7 @@ class StickyHeader {
 						$(matching_header_link).addClass('is-current-link');
 					}
 				},
-				offset: "-30%"
+				offset: "-40%"
 			});
 		});
 	}
