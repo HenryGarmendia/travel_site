@@ -7,6 +7,13 @@ var gulp 				= require('gulp'),
 var config = { 
 	mode: { 
 		css: { 
+			variables: {
+				svg_with_png: function() {
+					return function(sprite, render) {
+						return render(sprite).split('.svg').join('.png');
+					}
+				}
+			},
 			sprite: 'sprite.svg',
 			render: { 
 				css: { 
