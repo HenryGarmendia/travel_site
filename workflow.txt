@@ -23,3 +23,5 @@ npm install waypoints --save
 npm install jquery-smooth-scroll --save
 npm install lazysizes --save
 npm install picturefill --save
+npm install gulp-svg2png --save-dev
+npm install gulp-modernizr --save-dev
