@@ -11121,8 +11121,8 @@ var current_year = new_date.getFullYear();
 (0, _jquery2.default)('.stite-footer__year').html(current_year);
 
 var mobile_menu = new _MobileMenu2.default();
-new _reveal_on_scroll2.default((0, _jquery2.default)('.feature-item'), '85%');
-new _reveal_on_scroll2.default((0, _jquery2.default)('.testimonial'), '60%');
+new _reveal_on_scroll2.default((0, _jquery2.default)('.feature-item'), '35%');
+new _reveal_on_scroll2.default((0, _jquery2.default)('.testimonial'), '30%');
 var sticky_header = new _sticky_header2.default();
 var modal = new _modal2.default();
 
