@@ -25,3 +25,5 @@ npm install lazysizes --save
 npm install picturefill --save
 npm install gulp-svg2png --save-dev
 npm install gulp-modernizr --save-dev
+npm install gulp-imagemin --save-dev
+npm install gulp-usemin --save-dev
