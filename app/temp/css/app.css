@@ -684,6 +684,7 @@ a {
 		margin-bottom: 1.6em; }
 
 .headline--no-t-margin { 
+		margin-bottom: 1.5rem;
 		margin-top: 0; }
 
 /* headline END */
